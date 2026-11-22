@@ -1,6 +1,6 @@
 name: Build Turkish Food Plugin
 
-on:
+'on':
   push:
   workflow_dispatch:
 
@@ -23,14 +23,16 @@ name: Setup Java
       
 name: Setup Gradle
       uses: gradle/actions/setup-gradle@v4
+      with:
+        gradle-version: '8.10'
 
       
-name: Build
-      working-directory: REDZ_Turk_Yemekleri_Kaynak_Projesi-4/TurkYemekleriPlugin/plugin
+name: Build Plugin
       run: gradle build
+      working-directory: REDZ_Turk_Yemekleri_Kaynak_Projesi-4/TurkYemekleriPlugin/plugin
 
       
-name: Upload JAR
+name: Upload Plugin
       uses: actions/upload-artifact@v4
       with:
         name: TurkYemekleriPlugin
