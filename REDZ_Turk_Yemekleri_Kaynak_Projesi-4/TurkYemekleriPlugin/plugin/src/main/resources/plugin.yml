@@ -1,0 +1,16 @@
+name: TurkYemekleri
+version: 1.0.0
+main: tr.redz.turkyemekleri.TurkYemekleri
+api-version: '1.21.11'
+description: 25 özel Türk yemeği ekler.
+author: REDZ
+commands:
+  yemek:
+    description: Türk yemekleri menüsünü açar.
+    usage: /yemek
+    permission: turkyemek.use
+permissions:
+  turkyemek.use:
+    default: true
+  turkyemek.admin:
+    default: op
